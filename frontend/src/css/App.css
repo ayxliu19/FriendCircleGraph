@@ -39,3 +39,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.wrapper {
+  background-color: #fff9e6;
+  padding: 20px;
+  border-radius: 10px;
+}
