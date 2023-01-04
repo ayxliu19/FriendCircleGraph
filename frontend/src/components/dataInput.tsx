@@ -9,11 +9,17 @@ const FriendSelectMultiple = MultiSelect2.ofType<IFriend>();
 
 const renderTag = (friend: IFriend) => friend.first;
 
-function addNewFriend(item: IFriend, list: IFriend[], self: IFriend) {
+function addFriend(item: IFriend, list: IFriend[], self: IFriend) {
   let equal:Boolean = self.first === item.first && self.last === item.last;
   let contains:Boolean = false;
   list.forEach((value) => {if (value.first === item.first && value.last === item.last) contains = true});
   if (!equal && !contains) list.push(item);
+  return list;
+}
+
+function removeFriend(item: IFriend, list: IFriend[]) {
+  list.forEach((value, i) => {if (value.first === item.first && value.last === item.last) delete list[i]});
+  return list;
 }
 
 export const SelectExample: React.FC = () => {
@@ -40,9 +46,10 @@ export const SelectExample: React.FC = () => {
         itemPredicate={filterFriend}
         itemRenderer={renderFriend}
         items={groupMembers}
-        onItemSelect={item => addNewFriend(item, friendsMultiple, friendSingle)}
+        onItemSelect={item => setFriendMultiple(addFriend(item, friendsMultiple, friendSingle))}
         tagRenderer={renderTag}
         selectedItems={friendsMultiple}
+        onRemove={item => setFriendMultiple(removeFriend(item, friendsMultiple))}
       />
     </Card>
   );
