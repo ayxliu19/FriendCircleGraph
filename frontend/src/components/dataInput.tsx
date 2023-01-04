@@ -3,6 +3,7 @@ import { Button, MenuItem } from "@blueprintjs/core";
 import { Select2, MultiSelect2 } from "@blueprintjs/select";
 import { H3, Card } from "@blueprintjs/core";
 import { filterFriend, renderFriend, IFriend, groupMembers } from "./friends";
+import "../css/App.css"
 
 const FriendSelectSingle = Select2.ofType<IFriend>();
 const FriendSelectMultiple = MultiSelect2.ofType<IFriend>();
@@ -35,11 +36,10 @@ export const SelectExample: React.FC = () => {
         itemRenderer={renderFriend}
         noResults={<MenuItem disabled={true} text="No results." />}
         onItemSelect={item => {setFriendSingle(item); setFriendMultiple([]);}}
-        className="friend-select"
+        className="input-field"
       >
         <Button text={friendSingle.first} rightIcon="caret-down" />
       </FriendSelectSingle>
-      <br/>
       <br/>
       <H3>{"Who did you hang out with?"}</H3>
       <FriendSelectMultiple
@@ -50,7 +50,12 @@ export const SelectExample: React.FC = () => {
         tagRenderer={renderTag}
         selectedItems={friendsMultiple}
         onRemove={item => setFriendMultiple(removeFriend(item, friendsMultiple))}
+        className="input-field"
       />
+      <br/>
+      <Button>
+        {"Submit"}
+      </Button>
     </Card>
   );
 };

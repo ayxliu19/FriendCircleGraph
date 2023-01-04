@@ -51,10 +51,6 @@
   border-radius: 50px;
 }
 
-.friend-select {
-  display: inline-block;
-}
-
 .App {
   color: rgb(255, 255, 255);
 }
@@ -67,4 +63,9 @@
   vertical-align: middle;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.input-field {
+  display: inline-block;
+  margin-bottom: 1%;
 }
