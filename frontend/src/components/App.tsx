@@ -1,4 +1,4 @@
-import { FocusStyleManager } from "@blueprintjs/core";
+import { FocusStyleManager, Card, Button } from "@blueprintjs/core";
 
 import "normalize.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
@@ -26,6 +26,18 @@ function App() {
           This is a fun project that builds a weighted graph on how often everyone hangs out with each other in Poketmonster.
       </p>
       <SelectExample />
+      <Button
+          className={"button"}
+          icon="graph"
+      >
+        {"View Graph"}
+      </Button>
+      <Button
+          className={"button"}
+          icon="graph"
+      >
+        {"View Table"}
+      </Button>
     </div>
   )
 }

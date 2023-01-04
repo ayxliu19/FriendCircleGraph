@@ -48,6 +48,7 @@
 
 .data-input-card {
   margin: 10px;
+  border-radius: 50px;
 }
 
 .friend-select {
@@ -56,4 +57,14 @@
 
 .App {
   color: rgb(255, 255, 255);
+}
+
+.button {
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  margin-left: 5%;
+  margin-right: 5%;
 }
