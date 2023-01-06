@@ -1,7 +1,7 @@
 import React from "react";
 import { FocusStyleManager, Button } from "@blueprintjs/core";
 import { SelectExample } from "../components/dataInput";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import '../css/home.css';
 import "normalize.css";
@@ -15,17 +15,7 @@ import logo from '../assets/pepefrg-4.gif';
 FocusStyleManager.onlyShowFocusOnTabs();
 
 function Home() {
-    const [goToGraph, setGoToGraph] = React.useState(false);
-    const [goToTable, setGoToTable] = React.useState(false);
-
-    if (goToGraph) {
-        return <Navigate to="/graph" />;
-    }
-
-    if (goToTable) {
-        return <Navigate to="/table" />;
-    }
-
+    const navigate = useNavigate()
     return (
         <div className="home">
             <div>
@@ -41,14 +31,14 @@ function Home() {
             <Button
                 className={"button"}
                 icon="graph"
-                onClick={() => {setGoToGraph(true);}}
+                onClick={() => {navigate("/graph");}}
             >
             {"View Graph"}
             </Button>
             <Button 
                 className={"button"}
                 icon="th"
-                onClick={() => {setGoToTable(true);}}
+                onClick={() => {navigate("/table");}}
             >
             {"View Table"}
             </Button>
