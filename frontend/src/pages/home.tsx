@@ -27,7 +27,7 @@ function Home() {
     }
 
     return (
-        <div className="App">
+        <div className="home">
             <div>
                 <a href="https://discord.gg/sMN4Kc9k">
                     <img src={logo}/>

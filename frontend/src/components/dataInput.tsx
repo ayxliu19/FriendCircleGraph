@@ -3,7 +3,7 @@ import { Button, MenuItem } from "@blueprintjs/core";
 import { Select2, MultiSelect2 } from "@blueprintjs/select";
 import { H3, Card } from "@blueprintjs/core";
 import { filterFriend, renderFriend, IFriend, groupMembers } from "./friends";
-import "../css/home.css"
+import "../css/dataInput.css"
 
 const FriendSelectSingle = Select2.ofType<IFriend>();
 const FriendSelectMultiple = MultiSelect2.ofType<IFriend>();

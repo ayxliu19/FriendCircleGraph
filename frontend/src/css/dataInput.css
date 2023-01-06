@@ -1,0 +1,9 @@
+.data-input-card {
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.input-field {
+  display: inline-block;
+  margin-bottom: 1%;
+}
