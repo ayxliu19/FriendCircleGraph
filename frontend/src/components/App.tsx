@@ -1,45 +1,23 @@
-import { FocusStyleManager, Card, Button } from "@blueprintjs/core";
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
-import "normalize.css";
-import "@blueprintjs/core/lib/css/blueprint.css";
-import "@blueprintjs/icons/lib/css/blueprint-icons.css";
-import "@blueprintjs/popover2/lib/css/blueprint-popover2.css";
-import "@blueprintjs/select/lib/css/blueprint-select.css";
-import '../css/App.css'
-
-import { SelectExample } from "./dataInput"
-import logo from '../assets/pepefrg-4.gif'
-
-FocusStyleManager.onlyShowFocusOnTabs();
+import Home from '../pages/home'
+import Graph from '../pages/graph'
+import Table from '../pages/table'
+import NotFound from '../pages/NotFound'
 
 function App() {
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://discord.gg/sMN4Kc9k">
-          <img src={logo}/>
-        </a>
-      </div>
-      <h1>Welcome To The Poketmonster Hang Out Graph</h1>
-      <p>
-          This is a fun project that builds a weighted graph on how often everyone hangs out with each other in Poketmonster.
-      </p>
-      <SelectExample />
-      <Button
-          className={"button"}
-          icon="graph"
-      >
-        {"View Graph"}
-      </Button>
-      <Button
-          className={"button"}
-          icon="graph"
-      >
-        {"View Table"}
-      </Button>
-    </div>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/graph" element={<Graph />} />
+        <Route path="/table" element={<Table />} />
+        <Route path="*" element={<NotFound />} />
+    </Routes>
   )
 }
 
-export default App
+function WrappedApp() {
+  return <HashRouter> <App/> </HashRouter>
+}
+
+export default WrappedApp;
