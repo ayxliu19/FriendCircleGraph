@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "project": ["frontend/tsconfig.json"]
+    },
+    "plugins": [    
+        "react"
+    ],
+    "rules": {
+        "no-console": 1,
+        "linebreak-style": ["error", "windows"]
+    }
+}
