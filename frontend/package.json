@@ -12,14 +12,20 @@
     "@blueprintjs/core": "^4.13.0",
     "@blueprintjs/icons": "^4.11.0",
     "@blueprintjs/select": "^4.8.12",
+    "@types/react-router": "^5.1.20",
+    "graphql2chartjs": "^0.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.1"
+    "react-graph-vis": "^1.0.7",
+    "react-router-dom": "^6.6.1",
+    "react-vis-network-graph": "^3.0.1",
+    "vis-network": "^9.1.2"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
+    "@types/vis": "^4.21.24",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@vitejs/plugin-react": "^3.0.0",
     "eslint": "^8.31.0",

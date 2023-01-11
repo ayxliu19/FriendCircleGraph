@@ -13,7 +13,7 @@ export const groupMembers: IFriend[] = [
     { first: "Ryan", last: "Chen", nickname: "Navy Reject" },
     { first: "Jon", last: "Lin", nickname: "Nil Nahtanoj" },
     { first: "John", last: "Kim", nickname: "225 lbs & 4" },
-    { first: "Joe", last: "Pak", nickname: "Glizzy" },
+    { first: "Joseph", last: "Pak", nickname: "Glizzy" },
     { first: "Jimin", last: "Son", nickname: "Yau Me" },
     { first: "Kevin", last: "Chen", nickname: "Genetic Mistake" },
     { first: "Taewon", last: "Kim", nickname: "Hardstuck D4" },

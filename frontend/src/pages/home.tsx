@@ -1,4 +1,3 @@
-import React from "react";
 import { FocusStyleManager, Button } from "@blueprintjs/core";
 import { SelectExample } from "../components/dataInput";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +9,10 @@ import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import "@blueprintjs/popover2/lib/css/blueprint-popover2.css";
 import "@blueprintjs/select/lib/css/blueprint-select.css";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import logo from "../assets/pepefrg-4.gif";
+
 FocusStyleManager.onlyShowFocusOnTabs();
 
 function Home() {
@@ -18,7 +21,7 @@ function Home() {
         <div className="home">
             <div>
                 <a href="https://discord.gg/sMN4Kc9k">
-                    <img src={"../assets/pepefrg-4.gif"}/>
+                    <img src={logo}/>
                 </a>
             </div>
             <h1>Welcome To The Poketmonster Hang Out Graph</h1>
